@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/black_ops_one"
+        android:text="@string/logo"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:paddingTop="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp" />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/search"
+        android:layout_below="@id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B3B3B3"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
+        android:elevation="10dp">
+        <EditText
+            android:id="@+id/searh_text"
+            android:background="#B3B3B3"
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:textSize="37sp"
+            android:layout_height="wrap_content"
+            android:hint="@string/search"
+            android:fontFamily="@font/aldrich"
+            android:layout_marginStart="5dp"
+            android:textColorHint="@color/black_73"
+            android:autofillHints="@string/search"
+            android:inputType="text" />
+        <ImageView
+            android:background="#B3B3B3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/search_icon"
+            android:contentDescription="@string/search" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_below="@id/search"
+        android:text="@string/filter"
+        android:id="@+id/filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/background_blue_circled"
+        android:fontFamily="@font/aldrich"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:textSize="22sp"
+        android:layout_marginTop="10dp"
+        android:elevation="10dp"
+        android:onClick="openFilterPage"/>
+
+    <ScrollView
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:id="@+id/section1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:onClick="openSearchPage"
+                android:textColor="@color/black"
+                android:id="@+id/computers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/computers"
+                android:fontFamily="@font/aldrich"
+                android:textSize="28sp"
+                tools:ignore="OnClick" />
+
+            <HorizontalScrollView
+                android:layout_gravity="left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:gravity="left"
+                    android:id="@+id/computer_items"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/phones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phones"
+                android:fontFamily="@font/aldrich"
+                android:textSize="28sp"
+                android:layout_below="@id/logo"
+                android:onClick="openSearchPage" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/phone_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:onClick="openSearchPage"
+                android:textColor="@color/black"
+                android:id="@+id/televisions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/televisions"
+                android:fontFamily="@font/aldrich"
+                android:textSize="28sp"
+                android:layout_below="@id/logo"
+                android:layout_centerHorizontal="true"
+                tools:ignore="OnClick" />
+
+            <HorizontalScrollView
+                android:id="@+id/bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/television_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:orientation="vertical"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+
+</RelativeLayout>

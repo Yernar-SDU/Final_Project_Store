@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/black_ops_one"
+        android:text="@string/logo"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/search"
+        android:layout_below="@id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B3B3B3"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
+        android:elevation="10dp">
+        <EditText
+            android:background="#B3B3B3"
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:textSize="37sp"
+            android:layout_height="wrap_content"
+            android:hint="@string/search"
+            android:fontFamily="@font/aldrich"
+            android:layout_marginLeft="5dp"
+            android:textColorHint="@color/black_73"
+            />
+        <ImageView
+            android:background="#B3B3B3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/search_icon"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:onClick="openFilterPage"
+        android:layout_below="@id/search"
+        android:text="@string/filter"
+        android:id="@+id/filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/background_blue_circled"
+        android:fontFamily="@font/aldrich"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:textSize="22sp"
+        android:layout_marginTop="10dp"
+        android:elevation="10dp"/>
+
+    <ScrollView
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:id="@+id/items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="150dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+</RelativeLayout>

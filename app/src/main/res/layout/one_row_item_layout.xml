@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:onClick="openDetailPage"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@drawable/item_background">
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="180dp"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_weight="7"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:textSize="30sp" />
+            <ImageView
+                android:id="@+id/delete"
+                android:onClick="deleteFromBasket"
+                android:src="@android:drawable/ic_delete"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"
+                >
+
+
+            </ImageView>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_characteristics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/aldrich"
+            android:text=""
+            android:textColor="@color/black_73"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:id="@+id/item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="200 000tenge"
+            android:fontFamily="@font/aldrich"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/button_buy"
+            android:elevation="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_blue_circled"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:textSize="17sp"
+            android:text="Buy"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/item_class"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/item_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+</LinearLayout>

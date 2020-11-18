@@ -1,0 +1,199 @@
+<resources>
+    <string name="app_name">Techquick_store</string>
+
+
+    <!--Sign In-->
+    <string name="logo">Techquick</string>
+    <string name="slogan">fastest technics ever</string>
+    <string name="mail">mail</string>
+    <string name="password">password</string>
+    <string name="login">Log in</string>
+    <string name="signup">Sign up</string>
+    <string name="enter_without_account">Enter without account</string>
+
+
+    <!--Sign Up-->
+    <string name="fillblanks">Fill blanks</string>
+    <string name="name">name</string>
+    <string name="surname">surname</string>
+    <string name="phone_number">phone number</string>
+
+
+    <!--MainPage-->
+    <string name="filter">filter</string>
+    <string name="search">Search</string>
+    <string name="computers">Computers</string>
+    <string name="phones">Phones</string>
+    <string name="televisions">Televisions</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+
+    <!-- Filter -->
+    <string name="Filter">Filter</string>
+    <string name="choose_category"/>
+    <string-array name="category_names">
+        <item>Phones</item>
+        <item>Computers</item>
+        <item>Televisions</item>
+    </string-array>
+
+
+    <!-- Basket -->
+    <string name="basket">Basket</string>
+
+
+    <!--Filter WORDS-->
+    <string name="price">Price</string>
+    <string name="brand">Brand</string>
+    <string name="rating">Rating</string>
+    <string name="installedOS">Installed OS</string>
+    <string name="processType">ProcessorType</string>
+    <string name="ram">RAM</string>
+    <string name="SSD">SSD Space</string>
+    <string name="HDD">HDD Space</string>
+    <string name="color">Color</string>
+    <string name="diagonal">Diagonal</string>
+    <string name="cameraPixels">Camera Pixels</string>
+    <string name="wifi">Wi-Fi</string>
+    <string name="inputs">Inputs</string>
+    <string name="quality">Quality</string>
+
+
+
+
+    <!--PriceTagItems-->
+    <string name="price10000">till 10000</string>
+    <string name="price10000_49999">10000 - 49999</string>
+    <string name="price50000_99999">50000 - 99999</string>
+    <string name="price100000_149999">100000 - 149999</string>
+    <string name="price150000_199999">150000 - 199999</string>
+    <string name="price200000_499999">200000 - 499999</string>
+    <string name="price500000">from 500000</string>
+
+
+
+
+
+    <!--BrandTagItems-->
+    <string name="Acer">Acer</string>
+    <string name="Apple">Apple</string>
+    <string name="Dell">Dell</string>
+    <string name="HP">HP</string>
+    <string name="Lenovo">Lenovo</string>
+    <string name="Avalon">Avalon</string>
+
+
+
+    <!--HddSpaceItems-->
+    <string name="less300">less than 300GB</string>
+    <string name="f300to600">from 300 to 600GB</string>
+    <string name="f600to1032">from 600 to 1032GB</string>
+    <string name="f1032">from 1032GB</string>
+
+
+
+    <!--RAMSpaceItems-->
+    <string name="GB2">2 GB</string>
+    <string name="GB4">4 GB</string>
+    <string name="GB8">8 GB</string>
+    <string name="GB16">16GB</string>
+    <string name="GB32">32GB</string>
+
+
+    <!--"ProcessorType"Items-->
+    <string name="AMD">AMD</string>
+    <string name="Intel">Intel</string>
+
+
+
+
+    <!--RatingItems-->
+    <string name="star1">1 star and higher</string>
+    <string name="star2">2 star and higher</string>
+    <string name="star3">3 star and higher</string>
+    <string name="star4">4 star and higher</string>
+
+
+
+    <!--InstalledOSItems-->
+    <string name="Windows">Windows</string>
+    <string name="Linux">Linux</string>
+    <string name="Mac">Mac</string>
+
+
+
+    <!--CameraPixels-->
+    <string name="px2">2 megapixels</string>
+    <string name="px5">5 megapixels</string>
+    <string name="px8">8 megapixels</string>
+    <string name="px13">13 megapixels</string>
+    <string name="px16">16 megapixels</string>
+    <string name="px20">20 megapixels</string>
+
+
+
+
+    <!--DiagonalPhone-->
+    <string name="inch4">4 inches</string>
+    <string name="inch4.5">4.5 inches</string>
+    <string name="inch5">5 inches</string>
+    <string name="inch5.5">5.5 inches</string>
+    <string name="inch6">6 inches</string>
+    <string name="inch7">7 inches</string>
+
+
+
+    <!--DiagonalTelevision-->
+    <string name="inch40">40 inches</string>
+    <string name="inch45">45 inches</string>
+    <string name="inch50">50 inches</string>
+    <string name="inch55">55 inches</string>
+    <string name="inch60">60 inches</string>
+    <string name="inch70">70 inches</string>
+
+
+
+
+    <!--quality-->
+    <string name="q1080">1080i HD</string>
+    <string name="FullHD1080p">1080p Full HD</string>
+    <string name="HDR4K">4K HDR</string>
+    <string name="HDR8K">8K HDR</string>
+
+
+
+
+
+
+
+    <!--BrandTagItems-->
+    <string name="Oppo">Oppo</string>
+    <string name="Samsung">Samsung</string>
+    <string name="Huawei">Huawei</string>
+    <string name="Xiaomi">Xiaomi</string>
+    
+    
+
+
+
+    <!--AdminPage-->
+    <string name="AdminPage">Admin Page</string>
+    <string name="Items">Items</string>
+    <string name="Users">Users</string>
+
+
+
+
+
+
+
+
+    
+    <string name="LG">LG</string>
+
+
+</resources>

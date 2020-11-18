@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/item_image_detailed"
+        android:src="@drawable/a"/>
+
+
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/brand"
+            android:textColor="@color/black"
+            android:fontFamily="@font/aldrich"
+            android:textSize="25sp"/>
+        <TextView
+            android:id="@+id/brand_name_detailed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":  Asus"
+            android:textColor="@color/black"
+            android:fontFamily="@font/aldrich"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/HDD"
+            android:textColor="@color/black"
+            android:fontFamily="@font/aldrich"
+            android:textSize="25sp"/>
+        <TextView
+            android:id="@+id/hdd_space_name_detailed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":  512GB"
+            android:textColor="@color/black"
+            android:fontFamily="@font/aldrich"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/processType"
+            android:textColor="@color/black"
+            android:fontFamily="@font/aldrich"
+            android:textSize="25sp"/>
+        <TextView
+            android:id="@+id/processor_type_name_detailed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":  AMD"
+            android:textColor="@color/black"
+            android:fontFamily="@font/aldrich"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/installedOS"
+            android:textColor="@color/black"
+            android:fontFamily="@font/aldrich"
+            android:textSize="25sp"/>
+        <TextView
+            android:id="@+id/installed_OS_name_detailed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":  Mac"
+            android:textColor="@color/black"
+            android:fontFamily="@font/aldrich"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ram"
+            android:textColor="@color/black"
+            android:fontFamily="@font/aldrich"
+            android:textSize="25sp"/>
+        <TextView
+            android:id="@+id/ram_name_detailed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":  2GB"
+            android:textColor="@color/black"
+            android:fontFamily="@font/aldrich"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textColor="@color/black"
+            android:fontFamily="@font/aldrich"
+            android:textSize="25sp"/>
+        <TextView
+            android:id="@+id/price_name_detailed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":  322990T"
+            android:textColor="@color/black"
+            android:fontFamily="@font/aldrich"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:id="@+id/addtobasket"
+            android:onClick="addToBasket"
+            android:elevation="5dp"
+            android:padding="10dp"
+            android:background="@drawable/background_blue_circled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add to Basket"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
