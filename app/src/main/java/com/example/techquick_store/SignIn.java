@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -66,7 +67,7 @@ public class SignIn extends AppCompatActivity {
                         //check user role
 
                         //open mainPage for users
-                        if(userLoginHelper.USER_COLUMN_ROLE.equals("User")){
+                        if(cursor.getString(cursor.getColumnIndex(userLoginHelper.USER_COLUMN_ROLE)).equals("User")){
                             for_user_intent.putExtra("user_id",Integer.parseInt(cursor.getString(cursor.getColumnIndex(UserLoginHelper.USER_COLUMN_ID))));
                             for_user_intent.putExtra("logged_in",true);
                             cursor.close();
@@ -77,11 +78,10 @@ public class SignIn extends AppCompatActivity {
 
 
                         //open mainPage for admins
-                        if(userLoginHelper.USER_COLUMN_ROLE.equals("Admin")){
-                            for_user_intent.putExtra("user_id",Integer.parseInt(cursor.getString(cursor.getColumnIndex(UserLoginHelper.USER_COLUMN_ID))));
-                            for_user_intent.putExtra("logged_in",true);
+                        if(cursor.getString(cursor.getColumnIndex(userLoginHelper.USER_COLUMN_ROLE)).equals("Admin")){
                             cursor.close();
-                            startActivity(for_user_intent);
+                            Intent intent = new Intent(this,AdminActivity.class);
+                            startActivity(intent);
                             break;
                         }
 
@@ -89,7 +89,7 @@ public class SignIn extends AppCompatActivity {
 
 
                         //open mainPage for admins
-                        if(userLoginHelper.USER_COLUMN_ROLE.equals("Manager")){
+                        if(cursor.getString(cursor.getColumnIndex(userLoginHelper.USER_COLUMN_ROLE)).equals("Manager")){
                             for_user_intent.putExtra("user_id",Integer.parseInt(cursor.getString(cursor.getColumnIndex(UserLoginHelper.USER_COLUMN_ID))));
                             for_user_intent.putExtra("logged_in",true);
                             cursor.close();
