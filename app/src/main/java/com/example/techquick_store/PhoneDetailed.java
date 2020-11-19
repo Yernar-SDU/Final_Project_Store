@@ -78,7 +78,7 @@ public class PhoneDetailed extends AppCompatActivity {
             ContentValues contentValues = new ContentValues();
             contentValues.put(shopHelper.USER_ID,userID);
             contentValues.put(shopHelper.ITEM_ID,itemID);
-            contentValues.put(shopHelper.ITEM_CLASS,shopHelper.TABLE_NAME_COMPUTERS);
+            contentValues.put(shopHelper.ITEM_CLASS,shopHelper.TABLE_NAME_PHONE);
             database.insert(shopHelper.TABLE_NAME_BASKET,null,contentValues);
             view.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_bright));
             Toast.makeText(this,"Item has added to basket",Toast.LENGTH_LONG).show();
