@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:onClick="changeStatus"
+
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/white"
@@ -45,7 +47,6 @@
 
     <TextView
         android:id="@+id/userStatus"
-        android:onClick="changeStatus"
         android:layout_weight="1.8"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

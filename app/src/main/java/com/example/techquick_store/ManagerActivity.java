@@ -65,7 +65,14 @@ public class ManagerActivity extends AppCompatActivity {
 
 
 
-    public void changeStatus(View view){}
+    public void changeStatus(View view){
+        TextView textView = view.findViewById(R.id.user_id);
+
+        ChangeStatusDialog changeStatusDialog = new ChangeStatusDialog(Integer.parseInt(textView.getText().toString()));
+        changeStatusDialog.show(getSupportFragmentManager(),"dialog");
+
+
+    }
 
 
     @Override

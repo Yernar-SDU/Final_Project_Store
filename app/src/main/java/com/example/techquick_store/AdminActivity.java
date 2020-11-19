@@ -11,11 +11,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class AdminActivity extends AppCompatActivity {
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_layout);
-
     }
 
 
@@ -33,12 +34,11 @@ public class AdminActivity extends AppCompatActivity {
 
 
 
-
-
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(this,SignIn.class);
         startActivity(intent);
     }
+
 
 }
