@@ -16,7 +16,7 @@ public class ProfileDialog extends AppCompatDialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Account")
-                .setMessage("You did't logged in, do you want?")
+                .setMessage("You didn't logged in, do you want?")
                 .setPositiveButton("Sign In", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

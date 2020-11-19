@@ -22,6 +22,7 @@ public class PhoneDetailed extends AppCompatActivity {
     TextView brand,diagonal,camera_pixels,RAM,price;
     ImageView itemImage;
     Integer itemID,userID;
+    boolean logged_in;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +41,7 @@ public class PhoneDetailed extends AppCompatActivity {
         Intent intent = getIntent();
         itemID = intent.getIntExtra("item_id",2);
         userID = intent.getIntExtra("user_id",2);
-
+        logged_in = intent.getBooleanExtra("logged_in",false);
 
 
         gettingData(itemID-1);
@@ -73,16 +74,18 @@ public class PhoneDetailed extends AppCompatActivity {
 
 
     public void addToBasket(View view){
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(shopHelper.USER_ID,userID);
-        contentValues.put(shopHelper.ITEM_ID,itemID);
-        contentValues.put(shopHelper.ITEM_CLASS,shopHelper.TABLE_NAME_PHONE);
-        database.insert(shopHelper.TABLE_NAME_BASKET,null,contentValues);
-
-
-
-        Toast toast = Toast.makeText(this,"Item has added to basket",Toast.LENGTH_LONG);
-        toast.show();
+        if (logged_in == true){
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(shopHelper.USER_ID,userID);
+            contentValues.put(shopHelper.ITEM_ID,itemID);
+            contentValues.put(shopHelper.ITEM_CLASS,shopHelper.TABLE_NAME_COMPUTERS);
+            database.insert(shopHelper.TABLE_NAME_BASKET,null,contentValues);
+            view.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_bright));
+            Toast.makeText(this,"Item has added to basket",Toast.LENGTH_LONG).show();
+        }else{
+            ProfileDialog profileDialog = new ProfileDialog();
+            profileDialog.show(getSupportFragmentManager(),"dialog");
+        }
     }
 
 

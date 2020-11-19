@@ -135,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
         else{
             intent = new Intent(this,TelevisionDetailed.class);
         }
+        intent.putExtra("logged_in",logged_in);
         intent.putExtra("item_id",Integer.parseInt(id_name));
         intent.putExtra("user_id",userId);
         startActivity(intent);
