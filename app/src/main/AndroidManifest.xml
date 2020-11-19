@@ -81,6 +81,11 @@
         </activity>
 
 
+        <activity android:name=".ManagerActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
 
         <activity android:name=".ItemsAll">

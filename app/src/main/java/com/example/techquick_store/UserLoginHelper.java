@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 
 public class UserLoginHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "yernar.db";
-    public static final int VERSION = 6;
+    public static final int VERSION = 8;
     public static final String TABLE_NAME = "User";
     public static final String USER_COLUMN_NAME = "Name";
     public static final String USER_COLUMN_SURNAME = "Surname";

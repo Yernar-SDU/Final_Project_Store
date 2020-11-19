@@ -188,7 +188,9 @@
 
 
 
-
+    <!--ManagerPage-->
+    <string name="ManagerPage">ManagerPage</string>
+    <string name="ActiveUser">Active User</string>
 
 
 

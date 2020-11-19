@@ -31,8 +31,7 @@ public class SignIn extends AppCompatActivity {
         findViewByIds();
         shopHelper = new ShopHelper(this);
         shop_database = shopHelper.getWritableDatabase();
-
-
+        userLoginHelper = new UserLoginHelper(this);
 
 
     }
@@ -46,7 +45,6 @@ public class SignIn extends AppCompatActivity {
 
 
     public void openMainPage(View view){
-        Intent for_user_intent = new Intent(SignIn.this,MainActivity.class);
         Cursor cursor = database.query(UserLoginHelper.TABLE_NAME,null,null,null,null,null,null,null);
 
         // If user clicks login button
@@ -55,61 +53,52 @@ public class SignIn extends AppCompatActivity {
                 do {
 
                     //user mail and password
-                    int mail_index = cursor.getColumnIndex(userLoginHelper.USER_COLUMN_MAIL);
-                    int password_index = cursor.getColumnIndex(userLoginHelper.USER_COLUMN_PASSWORD);
+                    String mail_text = cursor.getString(cursor.getColumnIndex(userLoginHelper.USER_COLUMN_MAIL));
+                    String password_text = cursor.getString(cursor.getColumnIndex(userLoginHelper.USER_COLUMN_PASSWORD));
 
 
 
                     // check is mail and password are correct or not
-                    if(cursor.getString(mail_index).equals(mail.getText().toString()) && cursor.getString(password_index).equals(password.getText().toString())){
+                    if(mail_text.trim().equals(mail.getText().toString().trim()) && password_text.trim().equals(password.getText().toString().trim())){
 
+                        //check status of user
+                        if (cursor.getString(cursor.getColumnIndex(userLoginHelper.USER_COLUMN_STATUS)).equals("Active")){
+                            //check user role
+                            //open mainPage for users
+                            if(cursor.getString(cursor.getColumnIndex(userLoginHelper.USER_COLUMN_ROLE)).equals("User")){
+                                Intent intent = new Intent(this,MainActivity.class);
+                                intent.putExtra("user_id",Integer.parseInt(cursor.getString(cursor.getColumnIndex(UserLoginHelper.USER_COLUMN_ID))));
+                                intent.putExtra("logged_in",true);
+                                cursor.close();
+                                startActivity(intent);
+                            }
+                            //open mainPage for admins
+                            if(cursor.getString(cursor.getColumnIndex(userLoginHelper.USER_COLUMN_ROLE)).equals("Admin")){
+                                cursor.close();
+                                Intent intent = new Intent(this,AdminActivity.class);
+                                startActivity(intent);
+                            }
+                            //open mainPage for admins
+                            if(cursor.getString(cursor.getColumnIndex(userLoginHelper.USER_COLUMN_ROLE)).equals("Manager")){
+                                Intent intent = new Intent(this,ManagerActivity.class);
+                                cursor.close();
+                                startActivity(intent);
+                            }
+                        }else{
+                            Toast toast = Toast.makeText(this,"This user is blocked",Toast.LENGTH_LONG);
+                            toast.show();
+                            break;}
 
-                        //check user role
-
-                        //open mainPage for users
-                        if(cursor.getString(cursor.getColumnIndex(userLoginHelper.USER_COLUMN_ROLE)).equals("User")){
-                            for_user_intent.putExtra("user_id",Integer.parseInt(cursor.getString(cursor.getColumnIndex(UserLoginHelper.USER_COLUMN_ID))));
-                            for_user_intent.putExtra("logged_in",true);
-                            cursor.close();
-                            startActivity(for_user_intent);
-                            break;
-                        }
-
-
-
-                        //open mainPage for admins
-                        if(cursor.getString(cursor.getColumnIndex(userLoginHelper.USER_COLUMN_ROLE)).equals("Admin")){
-                            cursor.close();
-                            Intent intent = new Intent(this,AdminActivity.class);
-                            startActivity(intent);
-                            break;
-                        }
-
-
-
-
-                        //open mainPage for admins
-                        if(cursor.getString(cursor.getColumnIndex(userLoginHelper.USER_COLUMN_ROLE)).equals("Manager")){
-                            for_user_intent.putExtra("user_id",Integer.parseInt(cursor.getString(cursor.getColumnIndex(UserLoginHelper.USER_COLUMN_ID))));
-                            for_user_intent.putExtra("logged_in",true);
-                            cursor.close();
-                            startActivity(for_user_intent);
-                            break;
-                        }
-
-
-
-
-
-
-
-                    }
-                    else {
+                    }else{
                         Toast toast = Toast.makeText(this,"Wrong password or mail",Toast.LENGTH_LONG);
                         toast.show();
-                    }
+                        break;}
+
+
 
                 } while (cursor.moveToNext());
+
+
             }
 
         }
@@ -118,8 +107,10 @@ public class SignIn extends AppCompatActivity {
 
         // If user clicks enter without account button
         if(view.getId() == enter_without_account.getId()){
-            for_user_intent.putExtra("logged_in",false);
-            startActivity(for_user_intent);
+            Intent intent = new Intent(this,MainActivity.class);
+            intent.putExtra("logged_in",false);
+            cursor.close();
+            startActivity(intent);
         }
     }
 
@@ -133,11 +124,6 @@ public class SignIn extends AppCompatActivity {
         password = findViewById(R.id.password);
         database = userLoginHelper.getWritableDatabase();
     }
-
-
-
-
-
 
 
 
