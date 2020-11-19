@@ -31,11 +31,44 @@
         android:layout_below="@id/logo"
         android:layout_centerHorizontal="true"/>
 
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/search"
+        android:layout_below="@id/Users"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B3B3B3"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
+        android:elevation="10dp">
+        <EditText
+            android:background="#B3B3B3"
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:textSize="37sp"
+            android:layout_height="wrap_content"
+            android:hint="@string/search"
+            android:fontFamily="@font/aldrich"
+            android:layout_marginLeft="5dp"
+            android:textColorHint="@color/black_73"
+            />
+        <ImageView
+            android:background="#B3B3B3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/search_icon"/>
+
+    </LinearLayout>
+
     <ScrollView
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/Users">
+        android:layout_below="@id/search">
         <LinearLayout
             android:id="@+id/container_for_users"
             android:layout_width="match_parent"

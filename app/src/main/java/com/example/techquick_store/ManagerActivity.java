@@ -27,20 +27,29 @@ public class ManagerActivity extends AppCompatActivity {
 
 
 
+        users_container = findViewById(R.id.container_for_users);
+
 
 
         if (cursor.moveToFirst()){
             do {
-                View view = getLayoutInflater().inflate(R.layout.one_user_layout,null,false);
+                View view = getLayoutInflater().inflate(R.layout.one_user_manager_layout,null,false);
 
                 user_id = view.findViewById(R.id.user_id);
                 user_name = view.findViewById(R.id.user_name);
                 user_surname = view.findViewById(R.id.user_surname);
+                user_status = view.findViewById(R.id.userStatus);
+
 
                 user_id.setText(cursor.getString(cursor.getColumnIndex(UserLoginHelper.USER_COLUMN_ID)));
                 user_name.setText(cursor.getString(cursor.getColumnIndex(UserLoginHelper.USER_COLUMN_NAME)));
                 user_surname.setText(cursor.getString(cursor.getColumnIndex(UserLoginHelper.USER_COLUMN_SURNAME)));
                 user_status.setText(cursor.getString(cursor.getColumnIndex(UserLoginHelper.USER_COLUMN_STATUS)));
+
+                //Set blocked users background red
+                if(cursor.getString(cursor.getColumnIndex(UserLoginHelper.USER_COLUMN_STATUS)).equals("Blocked")){
+                    user_status.setBackgroundColor(getResources().getColor(android.R.color.holo_red_dark));
+                }
 
                 users_container.addView(view);
 
@@ -49,5 +58,11 @@ public class ManagerActivity extends AppCompatActivity {
 
 
 
+
     }
+
+
+
+
+    public void changeStatus(View view){}
 }

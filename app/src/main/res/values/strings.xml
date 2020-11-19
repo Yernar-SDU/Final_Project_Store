@@ -189,8 +189,8 @@
 
 
     <!--ManagerPage-->
-    <string name="ManagerPage">ManagerPage</string>
-    <string name="ActiveUser">Active User</string>
+    <string name="ManagerPage">Manager Page</string>
+    <string name="ActiveUser">Blocked</string>
 
 
 
