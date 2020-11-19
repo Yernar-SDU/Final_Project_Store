@@ -1,5 +1,6 @@
 package com.example.techquick_store;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -65,4 +66,11 @@ public class ManagerActivity extends AppCompatActivity {
 
 
     public void changeStatus(View view){}
+
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this,SignIn.class);
+        startActivity(intent);
+    }
 }

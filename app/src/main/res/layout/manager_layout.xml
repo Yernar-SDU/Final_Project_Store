@@ -47,7 +47,7 @@
             android:background="#B3B3B3"
             android:layout_width="0dp"
             android:layout_weight="9"
-            android:textSize="37sp"
+            android:textSize="33sp"
             android:layout_height="wrap_content"
             android:hint="@string/search"
             android:fontFamily="@font/aldrich"

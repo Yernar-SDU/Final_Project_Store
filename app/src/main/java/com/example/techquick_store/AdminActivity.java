@@ -31,4 +31,14 @@ public class AdminActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+
+
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this,SignIn.class);
+        startActivity(intent);
+    }
+
 }
