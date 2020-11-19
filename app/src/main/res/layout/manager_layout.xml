@@ -44,6 +44,7 @@
         android:orientation="horizontal"
         android:elevation="10dp">
         <EditText
+            android:id="@+id/search_edit_text"
             android:background="#B3B3B3"
             android:layout_width="0dp"
             android:layout_weight="9"
@@ -55,6 +56,7 @@
             android:textColorHint="@color/black_73"
             />
         <ImageView
+            android:onClick="searchClicked"
             android:background="#B3B3B3"
             android:layout_weight="1"
             android:layout_width="0dp"
