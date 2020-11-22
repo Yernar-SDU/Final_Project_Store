@@ -6,8 +6,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -59,9 +61,20 @@ public class UsersAll extends AppCompatActivity {
             }while (cursor.moveToNext());
         }
 
+        View view = getLayoutInflater().inflate(R.layout.create_user_button,null,false);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+        layoutParams.topMargin = 20;
+        layoutParams.leftMargin = 25;
+        layoutParams.rightMargin = 25;
+        users_container.addView(view,layoutParams);
+
     }
 
-
+    public void createUser(View view){
+        Intent intent = new Intent(this,CreateUser.class);
+        startActivity(intent);
+    }
 
     public void editUser(View view){
         Intent intent = new Intent(this,ProfileAdminActivity.class);
