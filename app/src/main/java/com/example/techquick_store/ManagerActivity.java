@@ -104,7 +104,7 @@ public class ManagerActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this,SignIn.class);
-        startActivity(intent);
+        LogoutDialog logoutDialog = new LogoutDialog();
+        logoutDialog.show(getSupportFragmentManager(),null);
     }
 }

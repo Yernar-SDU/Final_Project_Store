@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void openProfilePage(View view){
         if(logged_in == true){
-            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,new Profile()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,new Profile(userId)).commit();
         }
         else{
             ProfileDialog profileDialog = new ProfileDialog();
