@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:text="Upload Photo"
+            android:text="Photo"
             android:gravity="center"
             android:textColor="@color/black"
             android:background="@drawable/item_background"
@@ -173,15 +173,32 @@
 
     </LinearLayout>
 
+    <TextView
+        android:onClick="deleteUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:text="Delete User"
+        android:padding="10dp"
+        android:background="@drawable/background_red"
+        />
+
+
 
     <TextView
-        android:onClick="openSignInPage"
+        android:layout_marginTop="50dp"
+        android:onClick="saveUserConfigurations"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Save Configurations"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="24sp"
-        android:gravity="bottom|center"
+        android:gravity="center"
         android:layout_marginBottom="20dp"
 
         />

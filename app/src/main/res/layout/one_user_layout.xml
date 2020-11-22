@@ -54,18 +54,6 @@
 
 
 
-    <TextView
-        android:onClick="deleteUser"
-        android:layout_weight="2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        android:text="Delete"
-        android:background="@drawable/background_red"
-        />
 
 
 

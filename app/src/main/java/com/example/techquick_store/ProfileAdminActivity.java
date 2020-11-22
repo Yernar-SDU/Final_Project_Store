@@ -83,12 +83,20 @@ public class ProfileAdminActivity extends AppCompatActivity {
 
 
 
-    public void openSignInPage(View view){
+    public void saveUserConfigurations(View view){
         ContentValues cv = new ContentValues();
         cv.put(userLoginHelper.USER_COLUMN_ROLE,roleSpinner.getSelectedItem().toString());
         cv.put(userLoginHelper.USER_COLUMN_STATUS,statusSpinner.getSelectedItem().toString());
 
         database.update(userLoginHelper.TABLE_NAME,cv," Id=?" , new String[]{user_id+""});
         Toast.makeText(this,"User configurations are changed",Toast.LENGTH_SHORT).show();
+    }
+
+
+
+    public void deleteUser(View view){
+        DeleteUserDialog deleteUserDialog = new DeleteUserDialog(user_id);
+        deleteUserDialog.show(getSupportFragmentManager(),"example dialog");
+
     }
 }
