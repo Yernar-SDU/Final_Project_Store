@@ -34,8 +34,8 @@ public class SignUp extends AppCompatActivity {
 
 
     public void signUp(View view){
-        if (name.getText()!=null && surname.getText()!=null &&
-                phone_number.getText() != null && mail.getText() != null && password.getText() !=null ){
+        if (name.getText()!=null || surname.getText()!=null ||
+                phone_number.getText() != null || mail.getText() != null || password.getText() !=null ){
             ContentValues cv = new ContentValues();
             cv.put(userLoginHelper.USER_COLUMN_NAME,name.getText().toString());
             cv.put(userLoginHelper.USER_COLUMN_SURNAME,surname.getText().toString());

@@ -12,5 +12,8 @@
     <color name="white_yellow">#BBB891</color>
     <color name="background_grey">#DDDDDD</color>
     <color name="darker_gray_80">#80aaaaaa</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
 
 </resources>

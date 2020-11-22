@@ -193,7 +193,19 @@
     <string name="ActiveUser">Blocked</string>
 
 
+    <string-array name="roleArray">
+        <item>User</item>
+        <item>Manager</item>
+        <item>Admin</item>
+    </string-array>
 
+
+
+
+    <string-array name="statusArray">
+        <item>Active</item>
+        <item>Blocked</item>
+    </string-array>
     
     <string name="LG">LG</string>
 

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/black_ops_one"
+        android:text="@string/logo"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Upload Photo"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:background="@drawable/item_background"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="37sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/surname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Surname"
+                android:textSize="37sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8 777 847 39 49"
+                android:textSize="27sp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="7dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:text="Role: "/>
+            <Spinner
+                android:id="@+id/roleSpinner"
+                android:layout_width="0dp"
+                android:layout_weight="2.1"
+                android:layout_height="wrap_content"
+                android:entries="@array/roleArray"
+                android:textSize="25sp"
+
+                android:textColor="@color/black"
+                android:background="@drawable/item_background"
+                android:padding="10dp"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="7dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:text="Status: "/>
+            <Spinner
+                android:id="@+id/statusSpinner"
+                android:layout_width="0dp"
+                android:layout_weight="2.1"
+                android:layout_height="wrap_content"
+                android:entries="@array/statusArray"
+                android:textSize="25sp"
+
+                android:textColor="@color/black"
+                android:background="@drawable/item_background"
+                android:padding="10dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="7dp">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:text="Mail: "/>
+            <TextView
+                android:id="@+id/mail"
+                android:layout_width="0dp"
+                android:layout_weight="2.1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:padding="3dp"
+                android:textColor="@color/black"
+                android:background="@drawable/item_background"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="7dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:text="Password: "/>
+            <TextView
+                android:id="@+id/password"
+                android:layout_width="0dp"
+                android:layout_weight="2.1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:padding="3dp"
+                android:textColor="@color/black"
+                android:background="@drawable/item_background"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:onClick="openSignInPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Save Configurations"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp"
+        android:gravity="bottom|center"
+        android:layout_marginBottom="20dp"
+
+        />
+
+
+</LinearLayout>
