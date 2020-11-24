@@ -70,7 +70,7 @@ public class AdminTelevisionDetailed extends AppCompatActivity {
 
 
 
-        view.setBackgroundColor(getResources().getColor(android.R.color.background_light));
+        view.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_dark));
         Toast.makeText(this,"The item configurations has been changed",Toast.LENGTH_SHORT).show();
     }
 }

@@ -151,6 +151,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void logOut(View view){
+        LogoutDialog logoutDialog = new LogoutDialog();
+        logoutDialog.show(getSupportFragmentManager(),"ads");
+    }
+
 
 
 
