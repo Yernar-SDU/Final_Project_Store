@@ -7,8 +7,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -58,12 +60,17 @@ public class AdminTelevisionDetailed extends AppCompatActivity {
 
 
 
-    public  void saveItemConfigurations(){
+    public  void saveItemConfigurations(View view){
         ContentValues cv = new ContentValues();
         cv.put(shopHelper.BRAND_COLUMN,brand.getText().toString());
         cv.put(shopHelper.DIAGONAL_COLUMN,diagonal.getText().toString());
         cv.put(shopHelper.QUALITY_COLUMN,quality.getText().toString());
         cv.put(shopHelper.PRICE_COLUMN,price.getText().toString());
-        database.update(shopHelper.TABLE_NAME_COMPUTERS,cv,"Id=?",new String[]{item_id+""});
+        database.update(shopHelper.TABLE_NAME_TELEVISION,cv,"Id=?",new String[]{item_id+""});
+
+
+
+        view.setBackgroundColor(getResources().getColor(android.R.color.background_light));
+        Toast.makeText(this,"The item configurations has been changed",Toast.LENGTH_SHORT).show();
     }
 }
