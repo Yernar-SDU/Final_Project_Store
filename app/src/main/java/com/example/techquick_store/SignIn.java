@@ -64,8 +64,8 @@ public class SignIn extends AppCompatActivity {
                             Intent intent = new Intent(this,MainActivity.class);
                             intent.putExtra("user_id",Integer.parseInt(cursor.getString(cursor.getColumnIndex(UserLoginHelper.USER_COLUMN_ID))));
                             intent.putExtra("logged_in",true);
-                            cursor.close();
                             startActivity(intent);
+                            break;
                         }
                         //open mainPage for admins
                         if(cursor.getString(cursor.getColumnIndex(userLoginHelper.USER_COLUMN_ROLE)).equals("Admin")){
@@ -76,7 +76,6 @@ public class SignIn extends AppCompatActivity {
                         //open mainPage for admins
                         if(cursor.getString(cursor.getColumnIndex(userLoginHelper.USER_COLUMN_ROLE)).equals("Manager")){
                             Intent intent = new Intent(this,ManagerActivity.class);
-                            cursor.close();
                             startActivity(intent);
                         }
                     }else{
@@ -84,13 +83,14 @@ public class SignIn extends AppCompatActivity {
                         toast.show();
                         break;}
 
+                }else{
+                    Toast toast = Toast.makeText(this,"Wrong password or mail",Toast.LENGTH_LONG);
+                    toast.show();
                 }
 
 
 
             } while (cursor.moveToNext());
-            Toast toast = Toast.makeText(this,"Wrong password or mail",Toast.LENGTH_LONG);
-            toast.show();
 
 
         }

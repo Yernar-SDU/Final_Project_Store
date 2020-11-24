@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/white"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
@@ -9,43 +10,43 @@
 
 
     <TextView
-        android:id="@+id/user_id"
-        android:layout_weight="1"
-        android:layout_width="0dp"
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textColor="@color/black"
-        android:text="1."/>
+        tools:text="1."/>
 
     <TextView
-        android:id="@+id/user_surname"
         android:layout_weight="3"
-        android:layout_width="0dp"
+        android:id="@+id/brand"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textColor="@color/black"
-        android:text=" Brand"/>
+        tools:text=" Brand"/>
 
 
 
     <ImageView
-        android:id="@+id/user_name"
+        android:id="@+id/image"
         android:layout_weight="4"
         android:layout_width="0dp"
         android:layout_height="80dp"
         android:textSize="20sp"
-        android:src="@drawable/a"
+        tools:src="@drawable/a"
         android:textColor="@color/black"
         android:text=" Yernar"/>
 
 
 
     <TextView
+        android:id="@+id/edit_button"
+        android:padding="5dp"
         android:onClick="editItem"
-        android:layout_weight="2"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textColor="@color/white"
         android:background="@drawable/background_blue"
         android:layout_marginLeft="4dp"
@@ -53,19 +54,6 @@
         android:text="Edit"/>
 
 
-
-    <TextView
-        android:onClick="deleteItem"
-        android:layout_weight="2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        android:text="Delete"
-        android:background="@drawable/background_red"
-        />
 
 
     <TextView

@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -42,7 +41,7 @@ public class UsersAll extends AppCompatActivity {
 
         if (cursor.moveToFirst()){
             do {
-                View view = getLayoutInflater().inflate(R.layout.one_user_layout,null,false);
+                View view = getLayoutInflater().inflate(R.layout.one_user_admin_layout,null,false);
 
                 user_id = view.findViewById(R.id.user_id);
                 user_name = view.findViewById(R.id.user_name);

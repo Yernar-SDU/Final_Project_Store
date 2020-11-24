@@ -24,6 +24,7 @@ public class DeleteUserDialog extends AppCompatDialogFragment {
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         userLoginHelper = new UserLoginHelper(getContext());
+        shopHelper = new ShopHelper(getContext());
         database = userLoginHelper.getWritableDatabase();
         shop_database = shopHelper.getWritableDatabase();
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -33,7 +34,7 @@ public class DeleteUserDialog extends AppCompatDialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         database.delete(userLoginHelper.TABLE_NAME, "Id=?",new String[]{user_id+""});
-                        shop_database.delete(shopHelper.TABLE_NAME_BASKET, "Id=?",new String[]{user_id+""});
+                        shop_database.delete(shopHelper.TABLE_NAME_BASKET, "User_id=?",new String[]{user_id+""});
                         Intent intent = new Intent(getActivity(),UsersAll.class);
                         startActivity(intent);
                     }
