@@ -51,25 +51,11 @@
 
     </LinearLayout>
 
-    <TextView
-        android:onClick="openFilterPage"
-        android:layout_below="@id/search"
-        android:text="@string/filter"
-        android:id="@+id/filter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/background_blue_circled"
-        android:fontFamily="@font/aldrich"
-        android:paddingRight="20dp"
-        android:paddingLeft="20dp"
-        android:textSize="22sp"
-        android:layout_marginTop="10dp"
-        android:elevation="10dp"/>
+
 
     <ScrollView
         android:layout_marginTop="20dp"
-        android:layout_below="@id/filter"
+        android:layout_below="@id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout

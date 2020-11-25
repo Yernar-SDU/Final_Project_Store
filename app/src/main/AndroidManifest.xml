@@ -34,12 +34,6 @@
         </activity>
 
 
-        <activity android:name=".Filter">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
 
         <activity android:name=".ComputerDetailed">
             <intent-filter>

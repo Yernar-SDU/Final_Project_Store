@@ -57,10 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void openFilterPage(View view){
-        Intent intent = new Intent(MainActivity.this,Filter.class);
-        startActivity(intent);
-    }
 
 
     public void openSearchPage(View view){
@@ -82,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     public void openMainPage(View view){
         getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,new MainPage()).commit();
 
@@ -99,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     public void openBasketPage(View view){
         if(userId == -1){
             ProfileDialog profileDialog = new ProfileDialog();
@@ -110,15 +104,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-
-    public void openSignInPage(View view){
-        Intent intent = new Intent(this,SignIn.class);
-        startActivity(intent);
-    }
-
-
-    //Opens details of clicked item
     public void openDetailPage(View view) {
         TextView class_text = view.findViewById(R.id.item_class);
         TextView id_text = view.findViewById(R.id.item_id);
@@ -141,8 +126,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
-
     public void findViewByIds(){
         frameLayout = findViewById(R.id.nav_host_fragment);
         computers = findViewById(R.id.computers);
@@ -150,18 +133,10 @@ public class MainActivity extends AppCompatActivity {
         televisions = findViewById(R.id.televisions);
     }
 
-
     public void logOut(View view){
         LogoutDialog logoutDialog = new LogoutDialog();
         logoutDialog.show(getSupportFragmentManager(),"ads");
     }
-
-
-
-
-
-    public void deleteFromBasket(View view){}
-
 
 
     @Override
