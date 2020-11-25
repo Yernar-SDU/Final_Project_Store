@@ -83,14 +83,14 @@ public class SignIn extends AppCompatActivity {
                         toast.show();
                         break;}
 
-                }else{
-                    Toast toast = Toast.makeText(this,"Wrong password or mail",Toast.LENGTH_LONG);
-                    toast.show();
                 }
 
 
 
+
             } while (cursor.moveToNext());
+            Toast toast = Toast.makeText(this,"Wrong password or mail",Toast.LENGTH_LONG);
+            toast.show();
 
 
         }

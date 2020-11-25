@@ -13,6 +13,8 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.w3c.dom.Text;
+
 import java.util.HashMap;
 
 public class UsersAll extends AppCompatActivity {
@@ -60,6 +62,8 @@ public class UsersAll extends AppCompatActivity {
             }while (cursor.moveToNext());
         }
 
+        TextView userNumber = findViewById(R.id.user_number);
+        userNumber.setText("Users registered " + cursor.getCount());
         View view = getLayoutInflater().inflate(R.layout.create_user_button,null,false);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 

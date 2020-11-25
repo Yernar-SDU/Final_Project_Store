@@ -23,14 +23,6 @@ public class SignUp extends AppCompatActivity {
         findViewByIds();
     }
 
-    private void findViewByIds() {
-        name = findViewById(R.id.name);
-        surname = findViewById(R.id.surname);
-        phone_number = findViewById(R.id.phone_number);
-        mail = findViewById(R.id.mail);
-        password = findViewById(R.id.password);
-        database = userLoginHelper.getWritableDatabase();
-    }
 
 
     public void signUp(View view){
@@ -65,4 +57,15 @@ public class SignUp extends AppCompatActivity {
             toast.show();
         }
     }
+
+
+    private void findViewByIds() {
+        name = findViewById(R.id.name);
+        surname = findViewById(R.id.surname);
+        phone_number = findViewById(R.id.phone_number);
+        mail = findViewById(R.id.mail);
+        password = findViewById(R.id.password);
+        database = userLoginHelper.getWritableDatabase();
+    }
+
 }
